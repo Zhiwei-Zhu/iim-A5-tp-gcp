@@ -36,4 +36,7 @@ module "bigquery" {
     source = "./modules/bigquery"
 }
 
+module "functions" {
+    source = "./modules/functions"
+}
 
