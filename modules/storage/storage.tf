@@ -3,6 +3,7 @@ resource "google_storage_bucket" "gcp_bucket_backend" {
   name          = "gcp_bucket_${var.username}_backend"
   location      = "EU"
   force_destroy = true
+}
 //création de la bucket pour le cloud function
 resource "google_storage_bucket" "gcp_bucket_cloudfunction" {
   name          = "gcp_bucket_${var.username}_cloudfunction"
