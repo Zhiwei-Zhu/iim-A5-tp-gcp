@@ -13,7 +13,7 @@ resource "google_storage_bucket" "gcp_bucke_vincentzhu_cloudfunction" {
 resource "google_storage_bucket_object" "archive" {
   name   = "index.zip"
   bucket = "gcp_bucke_vincentzhu_cloudfunction"
-  source = "./path/to/zip/file/which/contains/code"
+  source = "code.zip"
 }
 
 output "bucket_name" {
