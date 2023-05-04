@@ -16,14 +16,16 @@ Dans le cas de si il y a plusieurs envirronement :
  <strong>"gcp" + env_name + service_name + "table"+ my_name + use_for</strong>
 
 >## Avant installation du repo git
-Veuillez posséder un compte GCP et avoir créé un projet GCP.
-Veuillez aussi activer les API:
+### Veuillez posséder un compte GCP et avoir créé un projet GCP.
+
+### Veuillez aussi activer les API:
 - Cloud Functions API
 - Cloud Run API
+- Cloud Storage API
 - Cloud Build API
 
 >## Installation du repo git
-
+### Dans le shell/éditeur de la plateforme GCP:
 - git clone https://github.com/Zhiwei-Zhu/tf-gcp-challenge-Vincent-ZHU.git
 - cd tf-gcp-challenge-Vincent-ZHU/
 - change username dans variable.tf si nécessaire ( ne pas oublier de changer la valeur de bucket dans backend de main.tf aussi )
