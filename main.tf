@@ -1,21 +1,23 @@
 terraform {
-  # backend "gcs" {
-  #   bucket = "gcp-bucket_${var.__backend"
-  #   prefix = "terraform/state"
-  # }
+  backend "gcs" {
+    bucket = "gcp-bucket_${var.usernaem}_backend"
+    prefix = "terraform/state"
+    depends_on = [ module.storage ]
+  }
   required_providers {
     google = {
       source = "hashicorp/google"
     }
   }
 }
+//provider google
 provider "google" {
   version = "3.5.0"
   project = var.project_id
   region  = var.region
   zone    = var.zone
 }
-
+// definition des modules
 module "storage" {
     source = "./modules/storage"
     username = var.username

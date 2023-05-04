@@ -1,4 +1,4 @@
-
+//création de la dataset
 resource "google_bigquery_dataset" "default" {
   dataset_id                  = "gcp_dataset_${var.username}"
   friendly_name               = "gcp_dataset_${var.username}"
@@ -6,6 +6,7 @@ resource "google_bigquery_dataset" "default" {
   location                    = "EU"
 }
 
+//création de la table
 resource "google_bigquery_table" "default" {
   dataset_id = google_bigquery_dataset.default.dataset_id
   table_id   = "gcp_bigquery_table_${var.username}"

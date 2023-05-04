@@ -1,3 +1,4 @@
+//création de la fonction cloud
 resource "google_cloudfunctions_function" "function" {
   name        = "gcp_function_${var.username}"
   description = "My function"

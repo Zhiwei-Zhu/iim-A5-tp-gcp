@@ -1,3 +1,4 @@
+//définition des variables globales
 variable "project_id" {
     default = "crypto-plexus-385512"
 }
@@ -11,7 +12,7 @@ variable "zone" {
 }
 
 variable "username" {
-    default = "vincentzhu"  /// Change this to your username to make it unique service_name if not working, add numbers next to it
+    default = "vincentzhu"  /// changer le username pour rendre unique ex: vincentzhu2E12E
 }
 
 variable "zipfile_name" {
