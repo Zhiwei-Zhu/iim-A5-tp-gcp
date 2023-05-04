@@ -1,4 +1,4 @@
-variable "usersame" {
+variable "username" {
   type = string
 }
 variable "zipfile_name" {

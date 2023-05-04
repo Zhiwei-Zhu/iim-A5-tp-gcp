@@ -1,3 +1,3 @@
-variable "usersame" {
+variable "username" {
   type = string
 }
