@@ -1,9 +1,9 @@
 terraform {
-  backend "gcs" {
-    bucket = "gcp-bucket_${var.username}_backend"
-    prefix = "terraform/state"
-    depends_on = [ module.storage ]
-  }
+  // ne peux pas lancer le backend en même que la création des buckets
+  # backend "gcs" {
+  #   bucket = "gcp_bucket_vzhu1213_cloudfunction"
+  #   prefix = "terraform/state"
+  # }
   required_providers {
     google = {
       source = "hashicorp/google"

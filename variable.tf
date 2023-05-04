@@ -12,7 +12,7 @@ variable "zone" {
 }
 
 variable "username" {
-    default = "vincentzhu"  /// changer le username pour rendre unique ex: vincentzhu2E12E
+    default = "vzhu1213" //vous pouvez modifier l'username dans le cas d'une erreur de création de bucket, veuillez aussi modifier sur le main.tf la valeur de bucket dans backend
 }
 
 variable "zipfile_name" {
