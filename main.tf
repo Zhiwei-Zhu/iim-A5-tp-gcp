@@ -31,5 +31,6 @@ module "functions" {
     source = "./modules/functions"
     username = var.username
     zipfile_name = var.zipfile_name
+    depends_on = [ module.storage ]
 }
 

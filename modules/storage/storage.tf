@@ -14,4 +14,5 @@ resource "google_storage_bucket_object" "archive" {
   name   = var.zipfile_name
   bucket = "gcp_bucket_${var.username}_cloudfunction"
   source = "code.zip"
+  depends_on = [ google_storage_bucket.gcp_bucket_cloudfunction ]
 }
