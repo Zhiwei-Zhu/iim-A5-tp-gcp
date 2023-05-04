@@ -4,6 +4,7 @@ terraform {
   #   bucket = "gcp_bucket_vzhu1213_cloudfunction"
   #   prefix = "terraform/state"
   # }
+  //définition du provider google
   required_providers {
     google = {
       source = "hashicorp/google"

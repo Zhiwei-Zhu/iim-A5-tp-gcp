@@ -1,1 +1,0 @@
-{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"bigquery","Source":"./modules/bigquery","Dir":"modules/bigquery"},{"Key":"functions","Source":"./modules/functions","Dir":"modules/functions"},{"Key":"storage","Source":"./modules/storage","Dir":"modules/storage"}]}
