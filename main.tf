@@ -1,18 +1,6 @@
-variable "project_id" {
-    default = "crypto-plexus-385512"
-}
-
-variable "region" {
-    default = "europe-west1"
-}
-
-variable "zone" {
-    default = "europe-west1-d"
-}
-
 terraform {
   # backend "gcs" {
-  #   bucket = "gcp-bucket_vincentzhu"
+  #   bucket = "gcp-bucket_${var.__backend"
   #   prefix = "terraform/state"
   # }
   required_providers {
@@ -30,13 +18,19 @@ provider "google" {
 
 module "storage" {
     source = "./modules/storage"
+    username = var.username
+    zipfile_name = var.zipfile_name
 }
 
 module "bigquery" {
     source = "./modules/bigquery"
+    username = var.username
 }
 
 module "functions" {
     source = "./modules/functions"
+    username = var.username
+    cf_storage_bucket_name = var.cf_storage_bucket_name
+    zipfile_name = var.zipfile_name
 }
 

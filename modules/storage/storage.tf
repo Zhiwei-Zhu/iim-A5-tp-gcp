@@ -1,17 +1,17 @@
-resource "google_storage_bucket" "gcp_bucket_vincentzhu_backend" {
-  name          = "gcp_bucket_vincentzhu_backend"
+resource "google_storage_bucket" "gcp_bucket_backend" {
+  name          = "gcp_bucket_${var.username}_backend"
   location      = "EU"
   force_destroy = true
 }
 
-resource "google_storage_bucket" "gcp_bucket_vincentzhu_cloudfunction" {
-  name          = "gcp_bucket_vincentzhu_cloudfunction"
+resource "google_storage_bucket" "gcp_bucket_cloudfunction" {
+  name          = "gcp_bucket_${var.username}_cloudfunction"
   location      = "EU"
   force_destroy = true
 }
 
 resource "google_storage_bucket_object" "archive" {
-  name   = "helloword.zip"
-  bucket = "gcp_bucket_vincentzhu_cloudfunction"
-  source = "./modules/storage/code.zip"
+  name   = var.zipfile_name
+  bucket = "gcp_bucket_${var.username}_cloudfunction"
+  source = "code.zip"
 }

@@ -1,11 +1,11 @@
 resource "google_cloudfunctions_function" "function" {
-  name        = "gcp_function_vincentzhu"
+  name        = "gcp_function_${var.username}"
   description = "My function"
   runtime     = "nodejs16"
 
   available_memory_mb   = 128
-  source_archive_bucket = "gcp_bucket_vincentzhu_cloudfunction"
-  source_archive_object = "helloword.zip"
+  source_archive_bucket = var.cf_storage_bucket_name
+  source_archive_object = var.zipfile_name
   trigger_http          = true
   entry_point           = "helloHttp"
 }

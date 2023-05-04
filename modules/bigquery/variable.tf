@@ -1,0 +1,3 @@
+variable "usersame" {
+  type = string
+}
