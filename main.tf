@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket = "gcp-bucket_${var.usernaem}_backend"
+    bucket = "gcp-bucket_${var.username}_backend"
     prefix = "terraform/state"
     depends_on = [ module.storage ]
   }
