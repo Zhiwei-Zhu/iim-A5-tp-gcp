@@ -4,7 +4,7 @@ resource "google_cloudfunctions_function" "function" {
   runtime     = "nodejs16"
 
   available_memory_mb   = 128
-  source_archive_bucket = var.cf_storage_bucket_name
+  source_archive_bucket = "gcp_bucket_${var.username}_cloudfunction"
   source_archive_object = var.zipfile_name
   trigger_http          = true
   entry_point           = "helloHttp"

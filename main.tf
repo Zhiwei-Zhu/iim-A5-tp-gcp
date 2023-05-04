@@ -30,7 +30,6 @@ module "bigquery" {
 module "functions" {
     source = "./modules/functions"
     username = var.username
-    cf_storage_bucket_name = var.cf_storage_bucket_name
     zipfile_name = var.zipfile_name
 }
 
